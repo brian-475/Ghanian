@@ -1,3 +1,7 @@
-input{
-    width:100px
+ input[type=text]{
+    width:4000px
+}
+
+*{
+    background-color: blue;
 }

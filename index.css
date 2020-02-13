@@ -1,3 +1,9 @@
 *{
     font-size: larger;
+    
+}
+
+input[type=text]{
+    width:400px
+    border: 2px solid black;
 }
