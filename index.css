@@ -1,3 +1,6 @@
+*{
+    background-color: cyan;
+}
 #two{
     background-color: cyan;
     text-align: center;
@@ -5,7 +8,7 @@
 }
 
 nav li{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bolder;
     font-style: italic;
     font-stretch: expanded;
@@ -21,4 +24,5 @@ nav li{
 #three{
     text-align: center;
     font-size: xx-large;
+    background-color: cyan;
 }
