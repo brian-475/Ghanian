@@ -26,3 +26,16 @@ nav li{
     font-size: xx-large;
     background-color: cyan;
 }
+#four{
+    text-align: center;
+    font-size: xx-large;
+}
+#five{
+    font-size: 18px;
+    float:left;
+}
+#six{
+    font-size: 18px;
+    float:right;
+
+}
