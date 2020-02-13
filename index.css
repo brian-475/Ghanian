@@ -32,12 +32,12 @@ nav li{
 }
 #five{
     font-size: 18px;
-    float:left;
+    text-align: center;
     color: red;
 }
 #six{
     font-size: 18px;
-    float:right;
+    text-align: center;
     color:red;
 }
 #seven{
