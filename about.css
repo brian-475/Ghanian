@@ -1,7 +1,18 @@
- input[type=text]{
-    width:4000px
-}
-
 *{
-    background-color: blue;
+    background-color: cyan;
+}
+nav li{
+    font-size: 50px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    font-size: xx-large;
+}
+#one{
+    text-align: center;
+    border;5px dotted black;
 }
