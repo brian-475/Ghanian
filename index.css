@@ -34,13 +34,17 @@ nav li{
 #five{
     font-size: 18px;
     text-align: center;
-    color: red;
+    color:black;
 }
 #six{
     font-size: 18px;
     text-align: center;
-    color:red;
+    colo:black;
 }
 #seven{
     text-align: center;
+}
+.two{
+    text-align: center;
+    font-size: 24px;
 }
