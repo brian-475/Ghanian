@@ -1,83 +1,119 @@
-function myFunction() {
+function akanNames() {
     var day = document.getElementById("day").value;
-    var dd = parseInt(day);
+    var DD = parseInt(day); // dd is the day
     var month = document.getElementById("month").value;
-    var mm = parseInt(month);
+    var MM = parseInt(month);// mm is the month
     var year = document.getElementById("year").value;
-    var yy = parseInt(year);
-    var cc = (yy - 1) / 100 + 1;
-    var result = parseInt(((cc / 4) - 2 * cc - 1) + ((5 * yy / 4)) + ((26 * (mm + 1) / 10)) + dd) % 7;
-    var boy = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-    var girl = ["Akosua", " Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+    var YY = parseInt(year); // yy is the year
+    var CC = parseInt(YY - 1) / 100 + 1; // cc is the century in digits
+    var dayOfTheWeek = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;//day of the week
+    var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]; // names of male  in array
+    var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];// names of female in array
+    //checking gender
     if (document.getElementById("gender").checked) {
-    var gender = 'male';
+        var gender = 'male';
     }
-   else {
-    var gender = 'female';
+    else {
+        var gender = 'female';
     }
-    if (mm < 1 || mm > 12 || mm == 2 && dd > 29) {
-    alert("INVALID MONTH");
+    // checking if month are correct
+    if (MM < 0 || MM > 12) {
+        alert("invalid month ");
     }
-    else if (dd < 1 || dd > 31) {
-    alert("INVALID DAY");
+    // checking if day is correct and does not exceed limit.  if its not correct alert user
+    else if (DD < 0 || DD > 31) {
+        alert("invalid  Date");
     }
-    else if (Math.ceil(result) == 1 && gender === 'male');{
-    document.getElementById("outcome").innerHTML =
-    ("Born on Monday ,your akan name is " + boy[1]);
+    // validating february month ...leap year to be checked
+    else if (MM == 2 && DD > 29) {
+        alert("This month does not have those number of days");
     }
-   if (Math.ceil(result) == 2 && gender === 'male') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Tuesday ,your akan name is " + boy[2]);
+    // validating year
+    else if (YY < 1000 || YY > 2020) {
+        alert("Invalid year");
     }
-    else if (Math.ceil(result) == 3 && gender === 'male') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Wednesday ,your akan name is " + boy[3]);
+    //The Math.ceil() function always rounds a number up to the next largest whole number
+    //day 1 monday
+    else if (Math.ceil(dayOfTheWeek) == 1 && gender === 'male' || gender === 'female|') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[1] + " ,which means you were born on a Monday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[1] + " ,which means you were born on a Monday."
+        }
     }
-    else if (Math.ceil(result) == 4 && gender === 'male') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Thursday,your akan name is " + boy[4]);
+    // day 2 Tuesday
+    else if (Math.ceil(dayOfTheWeek) == 2 && gender === 'female' || gender === 'male') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[2] + ", which means you were born on a Tuesday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[2] + ", which means you were born on a Tuesday."
+        }
     }
-    else if (Math.ceil(result) == 5 && gender === 'male') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Friday,your akan name is " + boy[5]);
+    // day 3 wednesday
+    else if (Math.ceil(dayOfTheWeek) === 3 && gender === 'female' || gender === 'male') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[3] + ", which means you were born on a Wednesday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[3] + ", which means you were born on a Wednesday."
+        }
     }
-    else if (Math.ceil(result) == 6 && gender === 'male') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Saturday,your akan name is " + boy[6]);
+    // day 4 thursday
+    else if (Math.ceil(dayOfTheWeek) == 4 && gender === 'female' || gender === 'male') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[4] + ", which means you were born on a Thursday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[4] + ", which means you were born on a Thursday."
+        }
     }
-    else if (Math.ceil(result) == 0 && gender === 'male') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Sunday,your akan name is " + boy[0]);
+    // day 5 friday
+    else if (Math.ceil(dayOfTheWeek) == 5 && gender === 'female' || gender === 'male') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[5] + ", which means you were born on a Friday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[5] + ", which means you were born on a Friday."
+        }
     }
-    else if (Math.ceil(result) == 1 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on monday ,your akan name is " + girl[1]);
+    // day 6 saturday
+    else if (Math.ceil(dayOfTheWeek) == 6 && gender === 'female' || gender === 'male') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[6] + ", which means you were born on a Saturday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[6] + ", which means you were born on a Saturday."
+        }
     }
-    else if (Math.ceil(result) == 2 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Tuesday,your akan name is " + girl[2]);
+    // day 7  sunday
+    else if (Math.ceil(dayOfTheWeek) == 0 && gender === 'female' || gender === 'male') {
+        if (gender === 'male') {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + maleNames[0] + ", which means you were born on a Sunday."
+        }
+        else {
+            document.getElementById("results").innerHTML =
+                "Your day name is " + femaleNames[0] + ", which means you were born on a Sunday."
+        }
     }
-    else if (Math.ceil(result) == 3 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Wednesday,your akan name is " + girl[3]);
+    // default prompt user to enter his or her details
+    else {
+        alert("Enter your information please!!!")
     }
-    else if (Math.ceil(result) == 4 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Thursday,your akan name is " + girl[4]);
-    }
-    else if (Math.ceil(result) == 5 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Friday,your akan name is " + girl[5]);
-    }
-    else if (Math.ceil(result) == 6 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Saturday,your akan name is " + girl[6]);
-    }
-    else if (Math.ceil(result) == 0 && gender === 'female') {
-    document.getElementById("outcome").innerHTML =
-    ("Born on Sunday,your akan name is " + girl[0]);
-    }
-   else {
-    alert("enter your information please");
-    }
-    }
+}
+
+

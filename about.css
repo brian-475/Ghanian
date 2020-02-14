@@ -14,7 +14,7 @@ p{
 input{
     width:300px;
     display: inline-block;
-    margin:10px;
+    margin:20px;
     padding:10px;
     font-size: xx-large;
     text-align: center;
@@ -34,5 +34,6 @@ input{
 .two{
     font-size:xx-small;
     color:red;
-}.one,.two{
+}#five{
+    font-size: 18px;
 }
