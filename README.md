@@ -21,5 +21,5 @@ Some of the keyed in dates are not responsive, Still working on that.
 Am always available through the email:brianadala15@gmail.com
 ### License
 <a href=https://choosealicense.com/licenses/mit/>MIT</a> 2020.
-Copyright (c) <2020> <brian adala>
+Copyright (c) 
  
