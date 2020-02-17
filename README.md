@@ -20,6 +20,6 @@ Some of the keyed in dates are not responsive, Still working on that.
 ## Support and contact details
 Am always available through the email:brianadala15@gmail.com
 ### License
+  [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 <a href=https://choosealicense.com/licenses/mit/>MIT</a> 2020.
 Copyright (c) 
- 
