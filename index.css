@@ -19,7 +19,7 @@ nav li{
 
 #one{
     font-size: larger;
-    width:400px
+    width:400px;
     border: 2px solid black;
     text-align:center;
 }
@@ -40,7 +40,7 @@ nav li{
 #six{
     font-size: 18px;
     text-align: center;
-    colo:black;
+    color:black;
 }
 #seven{
     text-align: center;
