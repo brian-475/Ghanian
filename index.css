@@ -1,6 +1,7 @@
 *{
     background-color: cyan;
     font-family:'Sriracha', cursive;
+    overflow-x: hidden;
 }
 #two{
     background-color: cyan;

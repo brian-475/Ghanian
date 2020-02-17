@@ -1,11 +1,16 @@
 *{
     background-color: cyan;
     font-family: 'Sriracha', cursive;
+    
+}
+body{
+    overflow-x: hidden;
 }
 nav li{
     font-size: 50px;
     text-align: center;
     font-weight: bold;
+    list-style: none;
         
 }
 p{
